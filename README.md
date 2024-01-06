@@ -14,11 +14,11 @@ The dataset is sourced from the Kaggle competition 'AMP®-Parkinson's Disease Pr
 
 - **Train_peptides.csv**:  Peptide-level mass spectrometry data, where each peptide is a subunit part of a protein. The file contains details about the month of the visit, relative to the first visit by the patient, and the amount of the peptide and the sequence and frequency of amino acids included in the peptide
 
--Train_proteins.csv: Protein expression frequencies compiled from peptide level data including visit and patient details, the related protein's UniProt ID code, and normalized protein expression and the frequency of the protein's occurrence in the sample.
+- **Train_proteins.csv**: Protein expression frequencies compiled from peptide level data including visit and patient details, the related protein's UniProt ID code, and normalized protein expression and the frequency of the protein's occurrence in the sample.
 
--Train_clinical_data.csv: Clinical information on each patient, such as details about the appointment and the patient as well as results from the various sections of the Unified Parkinson's Disease Rating Scale, which rates the severity of PD symptoms,where higher numbers indicate more severe symptoms along with  details like clinical state of mind whether or not the patient was taking medication such as Levodopa during the UPDRS assessment.
+- **Train_clinical_data.csv**: Clinical information on each patient, such as details about the appointment and the patient as well as results from the various sections of the Unified Parkinson's Disease Rating Scale, which rates the severity of PD symptoms,where higher numbers indicate more severe symptoms along with  details like clinical state of mind whether or not the patient was taking medication such as Levodopa during the UPDRS assessment.
 
--Supplemental_clinical_data.csv:  Clinical data without any corresponding CSF samples that are meant to offer context to the normal development of Parkinson's disease.This information is meant to give further background on how Parkinson's disease typically progresses. similar columns to train_clinical_data.csv are used.
+- **Supplemental_clinical_data.csv**:  Clinical data without any corresponding CSF samples that are meant to offer context to the normal development of Parkinson's disease.This information is meant to give further background on how Parkinson's disease typically progresses. similar columns to train_clinical_data.csv are used.
 
 ## Project Architecture
 ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/8cf35355-8f8d-4d82-a4c9-84b6f2a7493b)
@@ -125,24 +125,26 @@ Among all the models, using Unit Protein with GRU as a feature gave the best per
 The GRU model is configured with three layers (128, 64, and 32 units, respectively), and dropout layers with a rate of 0.15 after each GRU layer to reduce overfitting. An L2 regularization with a coefficient of 0.01 is applied to the second and third GRU layers. The output layer is a dense layer with linear activation. The model is compiled using the 'adam' optimizer, with a custom SMAPE+1 loss function and metric required for the Kaggle competition.
 
 Visualizations of the results for models using Peptides and Unitprot as individual features for different Deep Learning Models can be found in the figures below.
--Using Peptide as features:
-  -1.	GRU
+- **Using Peptide as features**:
+  
+  - 1.	**GRU**__
   ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/2757cb2c-55dc-4da2-a36f-a1dc8f527cd7)
 
-  -2.	Deep NN Model
+  - 2.	**Deep NN Model**__
   ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/11b72c0a-29ae-4ba6-ba3e-4bb0ee9475d5)
 
-  -3.	RNN
+  - 3.	**RNN**__
   ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/be1f4882-7916-4347-83d0-18f15e224a07)
 
--Using UnitProt as features
-  -1.	GRU
+- **Using UnitProt as features**:
+  
+  - 1.	**GRU**__
   ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/e09d2058-e2ad-4c01-9ba8-260fbcb6aecd)
 
-  -2.	Deep NN model
+  - 2.	**Deep NN model**__
   ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/57d49a99-be6e-449c-bd83-bb2d04ff25b7)
 
-  -3.	RNN
+  - 3.	**RNN**__
   ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/8602f01d-aef0-40bd-bd77-1d3ce3b3eb1b)
 
 
