@@ -12,7 +12,7 @@ The dataset is sourced from the Kaggle competition 'AMP®-Parkinson's Disease Pr
 
 ![image](https://github.com/Lohitha-Vanteru/AMP--Parkinsons-Disease-Progression-Prediction/assets/113141006/c904144f-dd94-42f6-99f9-744dd7210e89)
 
--### **Train_peptides.csv**:  Peptide-level mass spectrometry data, where each peptide is a subunit part of a protein. The file contains details about the month of the visit, relative to the first visit by the patient, and the amount of the peptide and the sequence and frequency of amino acids included in the peptide
+- **Train_peptides.csv**:  Peptide-level mass spectrometry data, where each peptide is a subunit part of a protein. The file contains details about the month of the visit, relative to the first visit by the patient, and the amount of the peptide and the sequence and frequency of amino acids included in the peptide
 
 -Train_proteins.csv: Protein expression frequencies compiled from peptide level data including visit and patient details, the related protein's UniProt ID code, and normalized protein expression and the frequency of the protein's occurrence in the sample.
 
